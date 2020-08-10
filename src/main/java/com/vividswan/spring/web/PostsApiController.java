@@ -6,8 +6,10 @@ import com.vividswan.spring.web.dto.PostsResponseDto;
 import com.vividswan.spring.web.dto.PostsSaveRequestDto;
 import com.vividswan.spring.web.dto.PostsUpdateRequestDto;
 import lombok.RequiredArgsConstructor;
+import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 import org.springframework.web.bind.annotation.*;
 
+@EnableJpaAuditing
 @RequiredArgsConstructor
 @RestController
 public class PostsApiController {
@@ -25,7 +27,7 @@ public class PostsApiController {
         return postsService.update(id, requestDto);
     }
 
-    @GetMapping("api/v1/posts/{id}")
+    @GetMapping("/api/v1/posts/{id}")
     public PostsResponseDto findById(@PathVariable Long id){
         return postsService.findById(id);
     }
