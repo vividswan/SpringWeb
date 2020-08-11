@@ -35,6 +35,8 @@ dependencies {
 
     compile('com.h2database:h2')
 
+    compile('org.springframework.boot:spring-boot-starter-mustache')
+
     annotationProcessor('org.projectlombok:lombok')
     testCompile('org.springframework.boot:spring-boot-starter-test')
 }
