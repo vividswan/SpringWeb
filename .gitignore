@@ -2,3 +2,4 @@
 .gradle
 .idea
 application-oath.properties
+*.class
